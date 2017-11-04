@@ -1,5 +1,38 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  {{#link-to "index" class="navbar-brand"}}
+    <div class="d-none d-lg-block">Dhammakaya Meditation Centre of Newcastle</div>
+    <div class="d-lg-none">DMC Newcastle</div>
+  {{/link-to}}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbar-toggle">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        {{#link-to "index" class="nav-link"}}HOME{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "about-us" class="nav-link"}}ABOUT US{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "teachings" class="nav-link"}}TEACHINGS{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "activities" class="nav-link"}}ACTIVITIES{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "news" class="nav-link"}}NEWS{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "media" class="nav-link"}}MEDIA{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "contact" class="nav-link"}}CONTACT{{/link-to}}
+      </li>
+      <li class="nav-item">
+        {{#link-to "faqs" class="nav-link"}}FAQS{{/link-to}}
+      </li>
+    </ul>
+  </div>
+</nav>
 {{outlet}}
