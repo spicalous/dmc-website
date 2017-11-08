@@ -1,7 +1,11 @@
 <div id="{{carouselId}}" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     {{#each imageSources as |imageSrc index|}}
-      <li data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+      {{#if index}}
+        <li data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+      {{else}}
+        <li class="active" data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+      {{/if}}
     {{/each}}
   </ol>
   <div class="carousel-inner">
