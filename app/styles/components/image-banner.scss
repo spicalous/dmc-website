@@ -1,4 +1,23 @@
-.image-banner {
-  min-height: 400px;
-  background-position: center;
+$blurValue: 5px;
+
+.image-banner-container {
+
+  &.blur {
+    margin: -$blurValue;
+    overflow: hidden;
+
+    .image-banner {
+      -webkit-filter: blur($blurValue);
+      -moz-filter: blur($blurValue);
+      -o-filter: blur($blurValue);
+      -ms-filter: blur($blurValue);
+      filter: blur($blurValue);
+    }
+  }
+
+  .image-banner {
+    min-height: 400px;
+    background-position: center;
+  }
+
 }
