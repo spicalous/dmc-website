@@ -3,11 +3,9 @@ import { htmlSafe } from '@ember/string';
 
 export default Component.extend({
 
-  classNames: ['image-banner-container'],
+  classNames: ['image-banner'],
 
-  classNameBindings: ['blur'],
-
-  blur: false,
+  attributeBindings: ['style'],
 
   didInsertElement() {
     let styles = [`background-image: url('${this.get('src')}');`];
@@ -17,7 +15,7 @@ export default Component.extend({
       styles.push(`background-position: ${backgroundPosition};`)
     }
 
-    this.set('imageBannerStyle', htmlSafe(styles.join('')));
+    this.set('style', htmlSafe(styles.join('')));
   }
 
 });

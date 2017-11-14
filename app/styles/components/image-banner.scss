@@ -1,23 +1,15 @@
-$blurValue: 5px;
+.image-banner {
+  height: 400px;
+  background-position: center;
 
-.image-banner-container {
-
-  &.blur {
-    margin: -$blurValue;
-    overflow: hidden;
-
-    .image-banner {
-      -webkit-filter: blur($blurValue);
-      -moz-filter: blur($blurValue);
-      -o-filter: blur($blurValue);
-      -ms-filter: blur($blurValue);
-      filter: blur($blurValue);
-    }
+  &_content {
+    height: 100%;
   }
 
-  .image-banner {
-    min-height: 400px;
-    background-position: center;
+  &_display {
+    padding: 1rem;
+    border-radius: 2px;
+    background: rgb(255, 255, 255) transparent;
+    background: rgba(255, 255, 255, 0.8);
   }
-
 }
