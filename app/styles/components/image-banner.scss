@@ -11,5 +11,9 @@
     border-radius: 2px;
     background: rgb(255, 255, 255) transparent;
     background: rgba(255, 255, 255, 0.8);
+
+    @include media-breakpoint-down(xs) {
+      font-size: 2.5rem;
+    }
   }
 }
