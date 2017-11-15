@@ -16,4 +16,4 @@ git add -A
 
 git commit -m "gh-pages"
 
-git push
+git push -f
