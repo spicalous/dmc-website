@@ -1,0 +1,40 @@
+.media {
+
+  &-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &-image img {
+    max-height: 190px;
+  }
+
+  @include media-breakpoint-up(xs) {
+    &-image {
+      flex: 0 0 calc(100% / 1.5);
+      max-width: calc(100% / 1.5);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &-image {
+      flex: 0 0 calc(100% / 2.5);
+      max-width: calc(100% / 2.5);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &-image {
+      flex: 0 0 calc(100% / 3.5);
+      max-width: calc(100% / 3.5);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-image {
+      flex: 0 0 calc(100% / 4.5);
+      max-width: calc(100% / 4.5);
+    }
+  }
+}

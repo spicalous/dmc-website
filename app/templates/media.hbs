@@ -2,9 +2,18 @@
   <h1 class="display-3 image-banner_display">MEDIA</h1>
 {{/img-banner}}
 <div class="container-fluid">
-  <div class="row mt-5">
-    <div class="col px-5">
-      <h1>Media</h1>
+  {{#each model as |album|}}
+    <div class="row my-5">
+      <div class="col px-5">
+        <h2>{{album.title}}</h2>
+      </div>
     </div>
-  </div>
+    <div class="row my-5 media-row d-flex align-items-center">
+    {{#each album.photos as |imageSrc|}}
+        <div class="media-image text-center mx-1">
+          <img class="img-fluid img-thumbnail" src="{{imageSrc}}">
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
 </div>
