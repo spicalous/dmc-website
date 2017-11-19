@@ -23,6 +23,7 @@ module.exports = function(defaults) {
 
   app.import('node_modules/bootstrap/js/dist/carousel.js');
   app.import('node_modules/bootstrap/js/dist/collapse.js');
+  app.import('node_modules/bootstrap/js/dist/modal.js');
   app.import('node_modules/bootstrap/js/dist/util.js');
 
   return app.toTree();

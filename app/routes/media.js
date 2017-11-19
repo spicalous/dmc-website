@@ -6,7 +6,7 @@ export default Route.extend({
     return [
       {
         title: 'Temple Photos',
-        photos: [
+        imageSources: [
           'assets/images/media/temple-photos/1486544107716.jpg',
           'assets/images/media/temple-photos/1486544320624.jpg',
           'assets/images/media/temple-photos/1486544467452.jpg',
@@ -20,7 +20,7 @@ export default Route.extend({
       },
       {
         title: 'Meditation Photos',
-        photos: [
+        imageSources: [
           'assets/images/media/meditation-photos/591012-meditation cl_236.jpg',
           'assets/images/media/meditation-photos/591012-meditation cl_623.jpg',
           'assets/images/media/meditation-photos/591012-meditation cl_1080.jpg',
