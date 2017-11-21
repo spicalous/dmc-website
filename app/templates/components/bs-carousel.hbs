@@ -1,23 +1,43 @@
 <div id="{{carouselId}}" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     {{#each imageSources as |imageSrc index|}}
-      {{#if index}}
-        <li data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+      {{#if selected}}
+        {{#if (eq selected imageSrc)}}
+          <li class="active" data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+        {{else}}
+          <li data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+        {{/if}}
       {{else}}
-        <li class="active" data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+        {{#if index}}
+          <li data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+        {{else}}
+          <li class="active" data-target="#{{carouselId}}" data-slide-to="{{index}}"></li>
+        {{/if}}
       {{/if}}
     {{/each}}
   </ol>
   <div class="carousel-inner">
     {{#each imageSources as |imageSrc index|}}
-      {{#if index}}
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{{imageSrc}}" alt="Slide {{index}}">
-        </div>
+      {{#if selected}}
+        {{#if (eq selected imageSrc)}}
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{imageSrc}}" alt="Slide {{index}}">
+          </div>
+        {{else}}
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{imageSrc}}" alt="Slide {{index}}">
+          </div>
+        {{/if}}
       {{else}}
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="{{imageSrc}}" alt="Slide {{index}}">
-        </div>
+        {{#if index}}
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{imageSrc}}" alt="Slide {{index}}">
+          </div>
+        {{else}}
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{imageSrc}}" alt="Slide {{index}}">
+          </div>
+        {{/if}}
       {{/if}}
     {{/each}}
   </div>

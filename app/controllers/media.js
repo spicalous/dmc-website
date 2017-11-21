@@ -6,8 +6,9 @@ export default Controller.extend({
 
   actions: {
 
-    selectAlbum(album) {
+    selectAlbumAndImage(album, image) {
       this.set('selectedAlbum', album);
+      this.set('selectedImage', image);
     }
   }
 });

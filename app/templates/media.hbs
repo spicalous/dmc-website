@@ -10,7 +10,7 @@
     </div>
     <div class="row media-row d-flex align-items-center">
       {{#each album.imageSources as |imageSrc|}}
-        <div class="media-image text-center mx-1 my-5" {{action "selectAlbum" album}}>
+        <div class="media-image text-center mx-1 my-5" {{action "selectAlbumAndImage" album imageSrc}}>
           <img class="img-fluid img-thumbnail" src="{{imageSrc}}">
         </div>
       {{/each}}
@@ -20,7 +20,7 @@
 
 {{#if selectedAlbum}}
   {{#ember-wormhole to="modal-wormhole"}}
-    {{#bs-modal onDismissed=(action "selectAlbum" null)}}
+    {{#bs-modal onDismissed=(action "selectAlbumAndImage" null null)}}
       <div class="modal-header">
         <h5 class="modal-title" id="carousel-modal-label">{{selectedAlbum.title}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -29,7 +29,8 @@
       </div>
       <div class="modal-body">
         {{bs-carousel carouselId="media-carousel"
-                      imageSources=selectedAlbum.imageSources}}
+                      imageSources=selectedAlbum.imageSources
+                      selected=selectedImage}}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
