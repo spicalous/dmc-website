@@ -8,7 +8,9 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('about-us');
-  this.route('teachings');
+  this.route('teachings', function() {
+    this.route('meditation-benefits');
+  });
   this.route('activities');
   this.route('news');
   this.route('media');
