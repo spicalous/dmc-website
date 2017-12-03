@@ -12,7 +12,9 @@ Router.map(function() {
     this.route('meditation-benefits');
   });
   this.route('activities');
-  this.route('news');
+  this.route('news', function() {
+    this.route('article', { path: ':year/:month/:day/:article' })
+  });
   this.route('media');
   this.route('contact');
   this.route('faqs');

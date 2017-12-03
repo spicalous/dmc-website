@@ -1,0 +1,17 @@
+{{img-banner src=model.coverImage}}
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col px-5">
+      <h2>
+        {{model.title}}
+      </h2>
+    </div>
+  </div>
+  {{#each articleSections as |section|}}
+    <div class="row my-4">
+      <div class="col px-5">
+        {{article-section data=section}}
+      </div>
+    </div>
+  {{/each}}
+</div>
