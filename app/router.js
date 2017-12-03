@@ -11,7 +11,10 @@ Router.map(function() {
   this.route('teachings', function() {
     this.route('meditation-benefits');
   });
-  this.route('activities');
+  this.route('activities', function() {
+    this.route('dhammachai-dhutanga');
+    this.route('magha-puja');
+  });
   this.route('news', function() {
     this.route('article', { path: ':year/:month/:day/:article' })
   });

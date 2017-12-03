@@ -9,13 +9,13 @@ export default Route.extend({
           cardImage: 'assets/images/activities/dhammachai-dhutanga_card.jpg',
           title: 'DHAMMACHAI DHUTANGA',
           shortDescription: 'Month-long mindfulness training',
-          link: 'activities'
+          link: 'activities.dhammachai-dhutanga'
         },
         {
           cardImage: 'assets/images/activities/magha-puja_card.jpg',
           title: 'MAGHA PUJA',
           shortDescription: 'Inner light leads to a brighter world',
-          link: 'activities'
+          link: 'activities.magha-puja'
         }
       ]
     }
