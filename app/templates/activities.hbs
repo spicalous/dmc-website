@@ -1,10 +1,56 @@
-{{#img-banner src="http://via.placeholder.com/800x400"}}
+{{#img-banner src="assets/images/activities_cover.png"}}
   <h1 class="display-3 image-banner_display">ACTIVITIES</h1>
 {{/img-banner}}
 <div class="container-fluid">
   <div class="row mt-5">
     <div class="col px-5">
-      <h1>Activities</h1>
+      <h2 class="mb-3">
+        Buddhist Tradition: World Peace through Inner Peace
+      </h2>
+      <p>
+        Throughout its history, the Dhammakaya Temple has never wavered from its mission to create world peace through
+        inner peace by promoting the Buddha’s method of meditation and teachings. The ultimate aim of all activities
+        organized by the temple is to bring peace to the minds of individuals, to society, and to the world that we all
+        share.
+      </p>
+      <p>
+        The goal was to make the temple a meditation-learning center for monks, novices, and peace-loving people of all
+        ages, nationalities and races. Back then, the questions were: <i>‘why is it that the majority of people who come
+        to the temple – any temple – are old people when the Buddha’s teachings are applicable for people of every age
+        and are best learned when they are young?’</i>, <i>‘Have people lost interest in temples or have temples ceased
+        to be interesting?’</i> and <i>‘How can we encourage and inspire people to learn Dhamma?’</i>
+      </p>
+      <p>
+        During its first 30 years, we concentrated on building a strong foundation of activities and different projects
+        within the temple. Later, the scope of these activities expanded to cooperate with many other Buddhist
+        organizations, non-governmental organizations, and educational institutions. Below are the examples of such
+        activities.
+      </p>
     </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col px-5">
+      <h2 class="mb-3">
+        Buddhist Ceremonies
+      </h2>
+    </div>
+  </div>
+  <div class="row px-5">
+    {{#each model.bhuddistCeremonies as | bc |}}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
+        <div class="card">
+          <img class="card-img-top" src="{{bc.cardImage}}">
+          <div class="card-body">
+            <h4 class="card-title">{{bc.title}}</h4>
+            <p class="card-text">
+              {{bc.shortDescription}}
+            </p>
+            {{#link-to bc.link class="card-link"}}
+              Read more
+            {{/link-to}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
   </div>
 </div>
