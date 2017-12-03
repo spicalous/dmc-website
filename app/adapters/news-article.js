@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import config from '../config/environment';
 
 export default DS.JSONAPIAdapter.extend({
 
@@ -6,15 +7,22 @@ export default DS.JSONAPIAdapter.extend({
 
   urlForFindAll() {
     let baseUrl = this.buildURL();
-    return `${baseUrl}/all.json`;
+    return this._addRootIfNotEmpty(`${baseUrl}/all.json`);
   },
 
   urlForQueryRecord({ year, month, day, article }) {
     let baseUrl = this.buildURL();
     if (year.length < 5 && month.length < 3 && day.length < 3 && article.length < 3) {
-      return `${baseUrl}/${year}/${month}/${day}/${article}.json`;
+      return this._addRootIfNotEmpty(`${baseUrl}/${year}/${month}/${day}/${article}.json`);
     }
-    return `${baseUrl}`;
-  }
+    return this._addRootIfNotEmpty(baseUrl);
+  },
 
+  _addRootIfNotEmpty(url) {
+
+    if (config.rootURL !== '/') {
+      return `${config.rootURL}/${url}`;
+    }
+    return url;
+  }
 });
