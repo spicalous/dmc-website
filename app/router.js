@@ -14,6 +14,11 @@ Router.map(function() {
   this.route('activities', function() {
     this.route('dhammachai-dhutanga');
     this.route('magha-puja');
+    this.route('earth-day');
+    this.route('visakha-bucha');
+    this.route('kathina');
+    this.route('alms-offering');
+    this.route('pali-commemoration');
   });
   this.route('news', function() {
     this.route('article', { path: ':year/:month/:day/:article' })
