@@ -1,0 +1,11 @@
+.separated-list {
+
+  > div,
+  > div > span {
+    @extend .p-2;
+  }
+
+  > div > span {
+    border-bottom: solid 1px $gray-400;
+  }
+}
