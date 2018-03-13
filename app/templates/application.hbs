@@ -1,44 +1,41 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-  {{#link-to "index" class="navbar-brand"}}
-    <div class="d-none d-lg-block">Dhammakaya Meditation Centre of Newcastle</div>
-    <div class="d-lg-none">DMC Newcastle</div>
-  {{/link-to}}
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle"
+          aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbar-toggle">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        {{#link-to "index" class="nav-link"}}HOME{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "about-us" class="nav-link"}}ABOUT US{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "teachings" class="nav-link"}}TEACHINGS{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "activities" class="nav-link"}}ACTIVITIES{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "news" class="nav-link"}}NEWS{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "media" class="nav-link"}}MEDIA{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "contact" class="nav-link"}}CONTACT{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "faqs" class="nav-link"}}FAQS{{/link-to}}
-      </li>
+      {{#link-to "index" tagName="li" class="nav-item"}}
+        <a class="nav-link">HOME</a>
+      {{/link-to}}
+      {{#link-to "about-us" tagName="li" class="nav-item"}}
+        <a class="nav-link">ABOUT US</a>
+      {{/link-to}}
+      {{#link-to "teachings" tagName="li" class="nav-item"}}
+        <a class="nav-link">TEACHINGS</a>
+      {{/link-to}}
+      {{#link-to "activities" tagName="li" class="nav-item"}}
+        <a class="nav-link">ACTIVITIES</a>
+      {{/link-to}}
+      {{#link-to "news" tagName="li" class="nav-item"}}
+        <a class="nav-link">NEWS</a>
+      {{/link-to}}
+      {{#link-to "media" tagName="li" class="nav-item"}}
+        <a class="nav-link">MEDIA</a>
+      {{/link-to}}
+      {{#link-to "contact" tagName="li" class="nav-item"}}
+        <a class="nav-link">CONTACT</a>
+      {{/link-to}}
+      {{#link-to "faqs" tagName="li" class="nav-item"}}
+        <a class="nav-link">FAQS</a>
+      {{/link-to}}
     </ul>
   </div>
 </nav>
 {{outlet}}
 <footer class="footer">
   <div class="container-fluid">
-    <div class="row mb-3">
+    <div class="row">
       <div class="col lead">
         Dhammakaya Meditation Centre of Newcastle
       </div>
@@ -46,17 +43,18 @@
     <div class="row text-muted">
       <div class="col-12 col-sm-6 mt-3">
         <address>
-        Dhammakaya Meditation Centre of Newcastle<br>
-        Church street<br>
-        Hebburn, Tyne and Wear<br>
-        NE31 1DR<br>
+          Dhammakaya Meditation Centre of Newcastle<br>
+          Church street<br>
+          Hebburn, Tyne and Wear<br>
+          NE31 1DR<br>
         </address>
         <a href="tel:01914 203981">01914 203981</a><br>
         <a href="mailto:dmcnewcastle@gmail.com">dmcnewcastle@gmail.com</a><br>
         Charity number: 1174069
       </div>
       <div class="col-12 col-sm-6 mt-3">
-        World peace through inner peace. A non-profit organisation located in Hebburn, South Tyneside, whose purpose is to teach meditation for world peace.
+        World peace through inner peace. A non-profit organisation located in Hebburn, South Tyneside, whose purpose is
+        to teach meditation for world peace.
       </div>
     </div>
   </div>

@@ -1,8 +1,12 @@
 .footer {
-  padding: 3rem;
+  padding: 2rem;
   border-top: 1px solid #E8E8E8;
 
   .container-fluid {
     max-width: 800px;
+  }
+
+  .row.text-muted {
+    font-size: 0.8rem;
   }
 }
