@@ -5,8 +5,7 @@ export default Route.extend({
   actions: {
 
     didTransition() {
-      window.scrollTo(0, 0);
-      return true;
+      document.querySelector('nav').scrollIntoView();
     }
 
   }
