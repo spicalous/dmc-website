@@ -19,6 +19,10 @@ Router.map(function() {
     this.route('kathina');
     this.route('alms-offering');
     this.route('pali-commemoration');
+    this.route('mass-ordination');
+    this.route('internation-ordination');
+    this.route('female-training-programs');
+    this.route('meditation-retreat');
   });
   this.route('news', function() {
     this.route('article', { path: ':year/:month/:day/:article' })

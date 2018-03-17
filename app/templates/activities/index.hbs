@@ -36,16 +36,41 @@
     </div>
   </div>
   <div class="row px-5">
-    {{#each model.bhuddistCeremonies as | bc |}}
+    {{#each model.bhuddistCeremonies as | ceremony |}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
         <div class="card">
-          <img class="card-img-top" src="{{bc.cardImage}}">
+          <img class="card-img-top" src="{{ceremony.cardImage}}">
           <div class="card-body">
-            <h4 class="card-title">{{bc.title}}</h4>
+            <h4 class="card-title">{{ceremony.title}}</h4>
             <p class="card-text">
-              {{bc.shortDescription}}
+              {{ceremony.shortDescription}}
             </p>
-            {{#link-to-and-scroll-nav bc.link class="card-link"}}
+            {{#link-to-and-scroll-nav ceremony.link class="card-link"}}
+              Read more
+            {{/link-to-and-scroll-nav}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="row mt-5">
+    <div class="col px-5">
+      <h2 class="mb-3">
+        Meditation and Mindfulness Training Programs
+      </h2>
+    </div>
+  </div>
+  <div class="row px-5">
+    {{#each model.trainingPrograms as | program |}}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
+        <div class="card">
+          <img class="card-img-top" src="{{program.cardImage}}">
+          <div class="card-body">
+            <h4 class="card-title">{{program.title}}</h4>
+            <p class="card-text">
+              {{program.shortDescription}}
+            </p>
+            {{#link-to-and-scroll-nav program.link class="card-link"}}
               Read more
             {{/link-to-and-scroll-nav}}
           </div>
