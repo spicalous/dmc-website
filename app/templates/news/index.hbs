@@ -12,9 +12,9 @@
             <p class="card-text">
               {{article.shortDescription}}
             </p>
-            {{#link-to "news.article" article.year article.month article.day article.id class="card-link"}}
+            {{#link-to-and-scroll-nav "news.article" article.year article.month article.day article.id class="card-link"}}
               Read more
-            {{/link-to}}
+            {{/link-to-and-scroll-nav}}
           </div>
         </div>
       </div>
