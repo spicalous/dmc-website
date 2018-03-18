@@ -1,10 +1,9 @@
-$toggler-colour: transparentize($white, 0.1);
+$toggler-colour: darken($newcastle-blue, 10);
 $toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$toggler-colour}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 .navbar {
-  @include radial-gradient(lighten($newcastle-blue, 20), $newcastle-blue);
-  border-bottom: 1px solid darken($newcastle-blue, 10);
-  box-shadow: 0px 0px 8px 0px;
+  background-color: #FAFAFA;
+  box-shadow: 0px 0px 4px 0px;
 
   .navbar-toggler {
     color: $toggler-colour;
@@ -16,13 +15,19 @@ $toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBo
   }
 
   .nav-item {
-    color: $white;
     cursor: pointer;
 
     &.active,
     &:hover {
-      color: $newcastle-blue;
-      background-color: transparentize($white, 0.1);
+      color: $white;
+    }
+
+    &.active {
+      background-color: $newcastle-blue;
+    }
+
+    &:hover {
+      background-color: lighten($newcastle-blue, 10);
     }
 
     .nav-link {
