@@ -5,9 +5,7 @@ export default Controller.extend({
 
   actions: {
 
-    transitionToAndCollapse(route) {
-      this.transitionToRoute(route);
-      document.querySelector('nav').scrollIntoView();
+    collapseNav() {
       Ember.$('.navbar-collapse').collapse('hide');
     }
 

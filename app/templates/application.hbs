@@ -4,31 +4,31 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-center" id="navbar-toggle">
-    <ul class="navbar-nav">
-      <li class="nav-item" {{action "transitionToAndCollapse" "index"}}>
+    <ul class="navbar-nav" {{action "collapseNav"}}>
+      {{#link-to "index" tagName="li" class="nav-item"}}
         <a class="nav-link">HOME</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "about-us"}}>
+      {{/link-to}}
+      {{#link-to "about-us" tagName="li" class="nav-item"}}
         <a class="nav-link">ABOUT US</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "teachings"}}>
+      {{/link-to}}
+      {{#link-to "teachings" tagName="li" class="nav-item"}}
         <a class="nav-link">TEACHINGS</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "activities"}}>
+      {{/link-to}}
+      {{#link-to "activities" tagName="li" class="nav-item"}}
         <a class="nav-link">ACTIVITIES</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "news"}}>
+      {{/link-to}}
+      {{#link-to "news" tagName="li" class="nav-item"}}
         <a class="nav-link">NEWS</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "media"}}>
+      {{/link-to}}
+      {{#link-to "media" tagName="li" class="nav-item"}}
         <a class="nav-link">MEDIA</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "contact"}}>
+      {{/link-to}}
+      {{#link-to "contact" tagName="li" class="nav-item"}}
         <a class="nav-link">CONTACT</a>
-      </li>
-      <li class="nav-item" {{action "transitionToAndCollapse" "faqs"}}>
+      {{/link-to}}
+      {{#link-to "faqs" tagName="li" class="nav-item"}}
         <a class="nav-link">FAQS</a>
-      </li>
+      {{/link-to}}
     </ul>
   </div>
 </nav>
