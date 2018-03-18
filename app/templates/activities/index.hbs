@@ -1,9 +1,9 @@
 {{#img-banner src="assets/images/activities_cover.png"}}
   <h1 class="display-3 image-banner_display">ACTIVITIES</h1>
 {{/img-banner}}
-<div class="container-fluid">
+<div class="container-fluid px-5">
   <div class="row mt-5">
-    <div class="col px-5">
+    <div class="col">
       <h2 class="mb-3">
         Buddhist Tradition: World Peace through Inner Peace
       </h2>
@@ -29,13 +29,11 @@
     </div>
   </div>
   <div class="row mt-5">
-    <div class="col px-5">
-      <h2 class="mb-3">
-        Buddhist Ceremonies
-      </h2>
+    <div class="col">
+      <h2>Buddhist Ceremonies</h2>
     </div>
   </div>
-  <div class="row px-5">
+  <div class="row">
     {{#each model.bhuddistCeremonies as | ceremony |}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
         <div class="card">
@@ -54,13 +52,13 @@
     {{/each}}
   </div>
   <div class="row mt-5">
-    <div class="col px-5">
-      <h2 class="mb-3">
+    <div class="col">
+      <h2>
         Meditation and Mindfulness Training Programs
       </h2>
     </div>
   </div>
-  <div class="row px-5">
+  <div class="row">
     {{#each model.trainingPrograms as | program |}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
         <div class="card">
