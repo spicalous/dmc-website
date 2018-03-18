@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 
 export default Controller.extend({
 
-  articleSections: computed('model.text.[]', 'model.images.[]', function() {
+  articleSections: computed('model.{text.[],images.[]}', function() {
     const text = this.get('model.text');
     const images = this.get('model.images');
     const textLength = text.get('length');

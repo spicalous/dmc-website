@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import $ from 'jquery'
 import Controller from '@ember/controller';
 
 export default Controller.extend({
@@ -6,7 +6,7 @@ export default Controller.extend({
   actions: {
 
     collapseNav() {
-      Ember.$('.navbar-collapse').collapse('hide');
+      $('.navbar-collapse').collapse('hide');
     }
 
   }
