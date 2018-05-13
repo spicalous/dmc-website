@@ -6,7 +6,7 @@ git pull
 git branch -f gh-pages gh-pages~1
 git rebase master gh-pages
 rm -rf dist/
-ember build --prod
+ember build -dev
 cp -R dist/* .
 git add -A
 git commit -m "gh-pages deploy"
