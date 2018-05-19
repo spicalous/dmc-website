@@ -30,6 +30,9 @@ Router.map(function() {
   this.route('media');
   this.route('contact');
   this.route('faqs');
+  this.route('events', function() {
+    this.route('meditation-retreat');
+  });
 });
 
 export default Router;
