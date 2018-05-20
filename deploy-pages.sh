@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+#
+# Builds the project with the dev flag and amends the git hub pages branch for pages deploy
+#
+# Ensure that the git hub pages branch only has 2 commits
+# 1. amending the ember config
+# 2. distribution files
+
 set -e
 set -x
 
