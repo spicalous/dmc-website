@@ -6,4 +6,5 @@
 set -e
 set -x
 
+ember build -prod
 scp -r dist/* root@meditationnewcastle.co.uk:/var/www/deploy
