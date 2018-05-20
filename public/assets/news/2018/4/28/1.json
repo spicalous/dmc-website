@@ -1,0 +1,14 @@
+{
+  "data": {
+    "id": 1,
+    "type": "news-article",
+    "attributes": {
+      "title": "Spring Meditation Retreat on 28-29th April 2018",
+      "year": 2018,
+      "month": 4,
+      "day": 28,
+      "cover-image": "",
+      "description": "Meditation retreat held on the 28-29th April 2018 at the Dhammakaya Meditation Centre of Newcastle"
+    }
+  }
+}

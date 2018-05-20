@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('adapter:new-article', 'Unit | Adapter | new article', {
+moduleFor('adapter:news-article', 'Unit | Adapter | news article', {
   // Specify the other units that are required for this test.
   // needs: ['serializer:foo']
 });

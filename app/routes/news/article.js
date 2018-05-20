@@ -1,9 +1,16 @@
+import $ from 'jquery';
+import RSVP from 'rsvp';
 import Route from '@ember/routing/route';
 
 export default Route.extend({
 
   model(params) {
-    return this.get('store').queryRecord('news-article', params);
+    const { year, month, day, article } = params;
+
+    return RSVP.hash({
+      data: this.get('store').queryRecord('news-article', params),
+      content: $.get(`assets/news/${year}/${month}/${day}/${article}.html`)
+    });
   }
 
 });

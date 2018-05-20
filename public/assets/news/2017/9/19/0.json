@@ -7,18 +7,8 @@
       "year": 2017,
       "month": 9,
       "day": 19,
-      "text": [
-        "The British Digital Financial company, ATOM Bank invited monks and staffs from Wat Phra Dhammakaya New Castle to be honorable guests at their meditation event on Monday 4th September 2017, from 10:00 am to 3:00 pm.",
-        "This event was launched to boost the employees level of happiness as well as increase relaxation. The number of attendees was overwhelming. The meditation event was divided into four rounds. Everyone received a full one-hour basic meditation guidance from the monk. Most of them reported that this was their first meditation class.",
-        "The event started with stretching and was followed by a meditation class led by the teaching monk. Then, a meditation discussion was opened for everyone to ask, learn and share their experiences. Many of the attendees experienced happiness and relaxation after the class.",
-        "With such overwhelmingly joyful experiences, everyone looked forward to another meditation event in the near future."
-      ],
-      "images": [
-        "assets/images/news/2017/9/19/0/1.jpg",
-        "assets/images/news/2017/9/19/0/2.jpg",
-        "assets/images/news/2017/9/19/0/3.jpg",
-        "assets/images/news/2017/9/19/0/4.jpg"
-      ]
+      "cover-image": "assets/images/news/2017/9/19/0/1.jpg",
+      "description": "The British Digital Financial company, ATOM Bank invited monks and staffs from Wat Phra Dhammakaya New Castle to behonorable guests at their meditation event on Monday 4th September 2017, from 10:00 am to 3:00 pm."
     }
   }
 }

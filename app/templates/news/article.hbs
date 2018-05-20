@@ -1,20 +1,12 @@
-{{img-banner src=model.coverImage}}
-<div class="container-fluid">
-  <div class="row mt-5">
-    <div class="col px-5">
-      <h2>
-        {{model.title}}
-      </h2>
+{{img-banner src=model.data.coverImage}}
+<div class="container-fluid px-5">
+  <div class="row my-5">
+    <div class="col">
+      <h2>{{model.data.title}}</h2>
     </div>
   </div>
-  {{#each articleSections as |section|}}
-    <div class="row my-4">
-      <div class="col px-5">
-        {{article-section data=section}}
-      </div>
-    </div>
-  {{/each}}
-<div class="row mb-5">
+  {{safeContent}}
+<div class="row my-5">
   <div class="col text-center">
     {{#link-to-and-scroll-nav "news"}}
       <button type="button" class="btn btn-outline-primary">
