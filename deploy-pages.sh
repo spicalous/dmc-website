@@ -11,7 +11,9 @@ set -x
 
 git checkout master
 git pull
-git branch -f gh-pages gh-pages~1
+git fetch
+git checkout -B gh-pages origin/gh-pages
+git reset --hard gh-pages~1
 git rebase master gh-pages
 rm -rf dist/
 ember build -dev
