@@ -6,5 +6,6 @@
 set -e
 set -x
 
+git checkout master
 ember build -prod
 scp -r dist/* root@meditationnewcastle.co.uk:/var/www/deploy
