@@ -8,10 +8,10 @@ export default Component.extend({
   attributeBindings: ['style'],
 
   didInsertElement() {
-    let styles = [`background-image: url('${this.get('src')}');`];
-    const backgroundPosition = this.get('backgroundPosition');
-    const contain = this.get('contain');
-    const noRepeat = this.get('noRepeat');
+    let styles = [`background-image: url('${this.src}');`];
+    const backgroundPosition = this.backgroundPosition;
+    const contain = this.contain;
+    const noRepeat = this.noRepeat;
 
     if (backgroundPosition) {
       styles.push(`background-position: ${backgroundPosition};`)

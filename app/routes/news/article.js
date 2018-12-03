@@ -8,7 +8,7 @@ export default Route.extend({
     const { year, month, day, article } = params;
 
     return RSVP.hash({
-      data: this.get('store').queryRecord('news-article', params),
+      data: this.store.queryRecord('news-article', params),
       content: $.get(`assets/news/${year}/${month}/${day}/${article}.html`)
     });
   }

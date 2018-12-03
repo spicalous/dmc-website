@@ -33,6 +33,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
+    ENV.googleAnalyticsId = 'google-analytics-id-test';
     // Testem prefers this...
     ENV.locationType = 'none';
 

@@ -5,7 +5,7 @@ export default Component.extend({
   didInsertElement() {
     const modal = this.$('.modal');
     modal.modal('show');
-    modal.on('hidden.bs.modal', this.get('onDismissed'));
+    modal.on('hidden.bs.modal', this.onDismissed);
   },
 
   willDestroyElement() {

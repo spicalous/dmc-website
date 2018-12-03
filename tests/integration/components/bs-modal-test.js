@@ -1,24 +1,19 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('bs-modal', 'Integration | Component | bs modal', {
-  integration: true
-});
+module('Integration | Component | bs modal', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  test('it renders', async function(assert) {
 
-  this.render(hbs`{{bs-modal}}`);
+    await render(hbs`
+      {{#bs-modal}}
+        template block text
+      {{/bs-modal}}
+    `);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#bs-modal}}
-      template block text
-    {{/bs-modal}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.dom('*').hasText('template block text');
+  });
 });

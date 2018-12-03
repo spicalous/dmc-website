@@ -10,8 +10,8 @@
     </div>
     <div class="row media-row d-flex align-items-center">
       {{#each album.imageSources as |imageSrc|}}
-        <div class="media-image text-center mx-1 my-5" {{action "selectAlbumAndImage" album imageSrc}}>
-          <img class="img-fluid img-thumbnail" src="{{imageSrc}}">
+        <div class="media-image text-center mx-1 my-5" role="button" {{action "selectAlbumAndImage" album imageSrc}}>
+          <img class="img-fluid img-thumbnail" src={{imageSrc}}>
         </div>
       {{/each}}
     </div>
