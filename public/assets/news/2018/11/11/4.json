@@ -1,0 +1,14 @@
+{
+  "data": {
+    "id": 4,
+    "type": "news-article",
+    "attributes": {
+      "title": "Kathina ceremony 2018",
+      "year": 2018,
+      "month": 11,
+      "day": 11,
+      "cover-image": "assets/images/news/4/34.jpg",
+      "description": "This years Kathina took place on the 11th November. In addition to the Kathina ceremony, this year included the installation of stained glass windows at the back of the chapel."
+    }
+  }
+}
