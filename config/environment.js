@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dmc-website',
     environment,
-    rootURL: '/',
+    rootURL: '/dmc-website',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
