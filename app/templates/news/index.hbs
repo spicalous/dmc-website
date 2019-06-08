@@ -3,20 +3,9 @@
 {{/img-banner}}
 <div class="container-fluid">
   <div class="row">
-    {{#each model as |article|}}
+    {{#each recentToOldArticles as |article|}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
-        <div class="card">
-          <img class="card-img-top" src={{article.coverImage}}>
-          <div class="card-body">
-            <h4 class="card-title">{{article.title}}</h4>
-            <p class="card-text">
-              {{article.description}}
-            </p>
-            {{#link-to-and-scroll-nav "news.article" article.year article.month article.day article.id class="card-link"}}
-              Read more
-            {{/link-to-and-scroll-nav}}
-          </div>
-        </div>
+        {{article-card article=article}}
       </div>
     {{/each}}
   </div>
