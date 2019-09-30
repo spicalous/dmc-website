@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('about-us');
   this.route('teachings', function() {
     this.route('meditation-benefits');
+    this.route('meditation-retreat');
   });
   this.route('activities', function() {
     this.route('dhammachai-dhutanga');
@@ -30,9 +31,6 @@ Router.map(function() {
   this.route('media');
   this.route('contact');
   this.route('faqs');
-  this.route('events', function() {
-    this.route('meditation-retreat');
-  });
 });
 
 export default Router;
