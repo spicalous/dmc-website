@@ -16,7 +16,7 @@ git checkout -B gh-pages origin/gh-pages
 git reset --hard gh-pages~1
 git rebase master gh-pages
 rm -rf dist/
-ember build -dev
+./node_modules/.bin/ember build -dev
 cp -R dist/* .
 git add -A
 git commit -m "gh-pages deploy"
