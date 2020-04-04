@@ -31,6 +31,7 @@ Router.map(function() {
   this.route('media');
   this.route('contact');
   this.route('faqs');
+  this.route('support');
 });
 
 export default Router;
