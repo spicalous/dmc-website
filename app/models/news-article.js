@@ -1,12 +1,10 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-
-  title: DS.attr('string'),
-  year: DS.attr('number'),
-  month: DS.attr('number'),
-  day: DS.attr('number'),
-  coverImage: DS.attr('string'),
-  description: DS.attr('string')
-
-});
+export default class NewsArticleModel extends Model {
+  @attr('string') title;
+  @attr('number') year;
+  @attr('number') month;
+  @attr('number') day;
+  @attr('string') coverImage;
+  @attr('string') description;
+}

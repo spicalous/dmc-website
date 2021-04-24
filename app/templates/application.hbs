@@ -1,42 +1,41 @@
-{{! template-lint-disable no-invalid-interactive }}
-
+{{! template-lint-disable no-invalid-interactive link-href-attributes}}
 <nav class="navbar navbar-expand-md">
-  {{#link-to "index" class="navbar-brand"}}
-    <img src="assets/images/logo.png" width="30" height="30" alt="">
-  {{/link-to}}
+  <LinkTo @route="index" class="navbar-brand">
+    <img src="assets/images/logo.png" width="30" height="30" alt="" role="presentation">
+  </LinkTo>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle"
           aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-center" id="navbar-toggle">
-    <ul class="navbar-nav" {{action "collapseNav"}}>
-      {{#link-to "index" tagName="li" class="nav-item"}}
+    <ul class="navbar-nav" {{on "click" this.collapseNav}}>
+      <LinkTo @route="index" @tagName="li" class="nav-item">
         <a class="nav-link">HOME</a>
-      {{/link-to}}
-      {{#link-to "about-us" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="about-us" @tagName="li" class="nav-item">
         <a class="nav-link">ABOUT US</a>
-      {{/link-to}}
-      {{#link-to "teachings" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="teachings" @tagName="li" class="nav-item">
         <a class="nav-link">TEACHINGS</a>
-      {{/link-to}}
-      {{#link-to "activities" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="activities" @tagName="li" class="nav-item">
         <a class="nav-link">ACTIVITIES</a>
-      {{/link-to}}
-      {{#link-to "news" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="news" @tagName="li" class="nav-item">
         <a class="nav-link">NEWS</a>
-      {{/link-to}}
-      {{#link-to "media" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="media" @tagName="li" class="nav-item">
         <a class="nav-link">MEDIA</a>
-      {{/link-to}}
-      {{#link-to "contact" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="contact" @tagName="li" class="nav-item">
         <a class="nav-link">CONTACT</a>
-      {{/link-to}}
-      {{#link-to "faqs" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="faqs" @tagName="li" class="nav-item">
         <a class="nav-link">FAQS</a>
-      {{/link-to}}
-      {{#link-to "support" tagName="li" class="nav-item"}}
+      </LinkTo>
+      <LinkTo @route="support" @tagName="li" class="nav-item">
         <a class="nav-link">SUPPORT</a>
-      {{/link-to}}
+      </LinkTo>
     </ul>
   </div>
 </nav>

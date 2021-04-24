@@ -1,20 +1,25 @@
-import Component from '@ember/component';
+import jQuery from 'jquery'
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
+export default class BsModalComponent extends Component {
 
-  didInsertElement() {
-    const modal = this.$('.modal');
+  @action
+  onDidInsert() {
+    const modal = jQuery('.modal');
     modal.modal('show');
-    modal.on('hidden.bs.modal', this.onDismissed);
-  },
-
-  willDestroyElement() {
-    const modal = this.$('.modal');
-    modal.off('hidden.bs.modal');
-  },
-
-  onDismissed() {
-    //empty by default
+    modal.on('hidden.bs.modal', this.onDismissed.bind(this));
   }
 
-});
+  @action
+  onWillDestroy() {
+    jQuery('.modal').off('hidden.bs.modal');
+  }
+
+  onDismissed() {
+    if (this.args.onDismissed) {
+      this.args.onDismissed();
+    }
+  }
+
+}

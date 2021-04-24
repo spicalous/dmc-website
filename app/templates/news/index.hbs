@@ -1,11 +1,11 @@
-{{#img-banner src="assets/images/news_cover.jpg"}}
+<ImgBanner @src="assets/images/news_cover.jpg">
   <h1 class="display-3 image-banner_display">NEWS</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid">
   <div class="row">
-    {{#each recentToOldArticles as |article|}}
+    {{#each this.recentToOldArticles as |article|}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
-        {{article-card article=article}}
+        <ArticleCard @article={{article}} />
       </div>
     {{/each}}
   </div>

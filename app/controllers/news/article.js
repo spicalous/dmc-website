@@ -1,11 +1,10 @@
-import { htmlSafe } from '@ember/string';
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/string';
 
-export default Controller.extend({
+export default class NewsArticleController extends Controller {
 
-  safeContent: computed('model.content', function() {
-    return htmlSafe(this.get('model.content'));
-  })
+  get safeContent() {
+    return htmlSafe(this.model.content);
+  }
 
-});
+}

@@ -14,12 +14,13 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
-    'plugin:prettier/recommended',
   ],
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'ember/no-jquery': 0
+  },
   overrides: [
     // node files
     {

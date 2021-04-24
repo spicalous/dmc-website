@@ -1,17 +1,13 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { htmlSafe } from '@ember/string';
 
-export default Component.extend({
+export default class ImgBannerComponent extends Component {
 
-  classNames: ['image-banner'],
-
-  attributeBindings: ['style'],
-
-  didInsertElement() {
-    let styles = [`background-image: url('${this.src}');`];
-    const backgroundPosition = this.backgroundPosition;
-    const contain = this.contain;
-    const noRepeat = this.noRepeat;
+  get style() {
+    let styles = [`background-image: url('${this.args.src}');`];
+    const backgroundPosition = this.args.backgroundPosition;
+    const contain = this.args.contain;
+    const noRepeat = this.args.noRepeat;
 
     if (backgroundPosition) {
       styles.push(`background-position: ${backgroundPosition};`)
@@ -23,7 +19,7 @@ export default Component.extend({
       styles.push(`background-repeat: no-repeat;`)
     }
 
-    this.set('style', htmlSafe(styles.join('')));
+    return htmlSafe(styles.join(''));
   }
 
-});
+}

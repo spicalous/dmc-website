@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/teachings_cover.jpg" backgroundPosition="top center"}}
+<ImgBanner @src="assets/images/teachings_cover.jpg" @backgroundPosition="top center">
   <h1 class="display-3 image-banner_display">TEACHINGS</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid">
   <div class="row">
     <div class="col lead mt-5 px-5">
@@ -36,11 +36,11 @@
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "teachings.meditation-benefits"}}
+      <LinkToAndScrollNav @route="teachings.meditation-benefits">
         <button type="button" class="btn btn-outline-primary">
           Learn more about the benefits
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

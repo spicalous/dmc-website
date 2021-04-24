@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/activities/visakha-bucha/banner.jpg"}}
+<ImgBanner @src="assets/images/activities/visakha-bucha/banner.jpg">
   <h1 class="display-3 image-banner_display">VISAKHA BUCHA</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row mt-5">
     <div class="col lead">
@@ -111,17 +111,18 @@
         beings. You are warmly invited to participate in Visakha Puja Day Ceremony that includes the offering of
         donation, observation of the precepts, meditation practice and circumambulation of the Grand Meditation Stadium,
         as commemoration of the Buddha’s Birth, Enlightenment, and Attainment of Complete Nibbana. For more information,
-        please contact us via our details on the {{#link-to-and-scroll-nav "contact"}}contact{{/link-to-and-scroll-nav}} page.
+        please contact us via our details on the {{#link-to-and-scroll-nav "contact"}}
+        contact{{/link-to-and-scroll-nav}} page.
       </p>
     </div>
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "activities"}}
+      <LinkToAndScrollNav @route="activities">
         <button type="button" class="btn btn-outline-primary">
           Back to activities
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

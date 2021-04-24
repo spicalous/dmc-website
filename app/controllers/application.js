@@ -1,13 +1,12 @@
-import $ from 'jquery'
+import jQuery from 'jquery'
 import Controller from '@ember/controller';
+import { action } from '@ember/object';
 
-export default Controller.extend({
+export default class ApplicationController extends Controller {
 
-  actions: {
-
-    collapseNav() {
-      $('.navbar-collapse').collapse('hide');
-    }
-
+  @action
+  collapseNav() {
+    jQuery('.navbar-collapse').collapse('hide');
   }
-});
+
+}

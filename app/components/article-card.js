@@ -1,11 +1,10 @@
-import Component from '@ember/component';
-import { computed } from '@ember/object';
+import Component from '@glimmer/component';
 
-export default Component.extend({
+export default class ArticleCardComponent extends Component {
 
-  dateText: computed(function() {
-    const article = this.get('article');
-    return `${article.get('day')}/${article.get('month')}/${article.get('year')}`;
-  })
+  get dateText() {
+    const article = this.args.article;
+    return `${article.day}/${article.month}/${article.year}`;
+  }
 
-});
+}

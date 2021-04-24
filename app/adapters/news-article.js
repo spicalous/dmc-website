@@ -1,14 +1,14 @@
-import DS from 'ember-data';
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
 import config from '../config/environment';
 
-export default DS.JSONAPIAdapter.extend({
+export default class NewsArticleAdapter extends JSONAPIAdapter {
 
-  namespace: 'assets/news',
+  namespace = 'assets/news';
 
   urlForFindAll() {
     let baseUrl = this.buildURL();
     return this._addRootIfNotEmpty(`${baseUrl}/all.json`);
-  },
+  }
 
   urlForQueryRecord({ year, month, day, article }) {
     let baseUrl = this.buildURL();
@@ -16,13 +16,13 @@ export default DS.JSONAPIAdapter.extend({
       return this._addRootIfNotEmpty(`${baseUrl}/${year}/${month}/${day}/${article}.json`);
     }
     return this._addRootIfNotEmpty(baseUrl);
-  },
+  }
 
   _addRootIfNotEmpty(url) {
-
     if (config.rootURL !== '/') {
       return `${config.rootURL}/${url}`;
     }
     return url;
   }
-});
+
+}

@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/activities/earth-day/banner.png"}}
+<ImgBanner @src="assets/images/activities/earth-day/banner.png">
   <h1 class="display-3 image-banner_display">EARTH DAY</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row mt-5">
     <div class="col">
@@ -42,7 +42,8 @@
         are difficult to control and may not be desirable to control.
       </p>
       <p>
-        Human activities such as deforestation, nuclear testing, air and water pollution, and over consumption of natural
+        Human activities such as deforestation, nuclear testing, air and water pollution, and over consumption of
+        natural
         resources, on the other hand, are the factors that deteriorate the earths condition and may be controlled. Since
         human beings are the main cause of environmental problems, it is necessary to change people’s attitudes and
         behaviors towards the earth.
@@ -140,11 +141,11 @@
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "activities"}}
+      <LinkToAndScrollNav @route="activities">
         <button type="button" class="btn btn-outline-primary">
           Back to activities
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

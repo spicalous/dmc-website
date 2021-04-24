@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/activities/pali-commemoration/banner.png"}}
+<ImgBanner @src="assets/images/activities/pali-commemoration/banner.png">
   <h1 class="display-3 image-banner_display">PALI COMMEMORATION</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row mt-5">
     <div class="col">
@@ -19,11 +19,11 @@
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "activities"}}
+      <LinkToAndScrollNav @route="activities">
         <button type="button" class="btn btn-outline-primary">
           Back to activities
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

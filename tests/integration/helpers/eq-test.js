@@ -10,9 +10,9 @@ module('helper:eq', function(hooks) {
   test('it renders', async function(assert) {
     this.set('inputValue', '1234');
 
-    await render(hbs`{{eq inputValue '1234'}}`);
+    await render(hbs`<div>{{eq inputValue '1234'}}</div>`);
 
-    assert.dom('*').hasText('true');
+    assert.dom('div').hasText('true');
   });
 });
 

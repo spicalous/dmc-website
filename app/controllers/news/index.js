@@ -1,10 +1,9 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
 
-export default Controller.extend({
+export default class NewsIndexController extends Controller {
 
-  recentToOldArticles: computed('model', function() {
-    return this.get('model').toArray().reverse();
-  })
+  get recentToOldArticles() {
+    return this.model.toArray().reverse();
+  }
 
-});
+}

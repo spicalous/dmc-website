@@ -1,10 +1,10 @@
 import LinkComponent from '@ember/routing/link-component';
 
-export default LinkComponent.extend({
+export default class LinkToAndScrollComponent extends LinkComponent {
 
   _invoke() {
-    this._super(...arguments);
+    super._invoke(...arguments);
     document.querySelector('nav').scrollIntoView();
   }
 
-});
+}

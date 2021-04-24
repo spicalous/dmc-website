@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/activities/mass-ordination/banner.png"}}
+<ImgBanner @src="assets/images/activities/mass-ordination/banner.png">
   <h1 class="display-3 image-banner_display">MASS ORDINATION</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row mt-5">
     <div class="col">
@@ -45,23 +45,23 @@
   <div class="row mt-5">
     <div class="col">
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pTY860kh3U0" frameborder="0"
+        <iframe title="mass ordination video" width="560" height="315" src="https://www.youtube.com/embed/pTY860kh3U0" frameborder="0"
                 allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
   </div>
   <div class="row mt-5">
     <div class="col">
-      {{img-banner src="assets/images/activities/mass-ordination/image-1.jpg"}}
+      <ImgBanner @src="assets/images/activities/mass-ordination/image-1.jpg"/>
     </div>
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "activities"}}
+      <LinkToAndScrollNav @route="activities">
         <button type="button" class="btn btn-outline-primary">
           Back to activities
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

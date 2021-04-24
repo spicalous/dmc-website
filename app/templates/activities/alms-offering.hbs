@@ -1,11 +1,11 @@
-{{#img-banner src="assets/images/activities/alms-offering/banner.png"}}
+<ImgBanner @src="assets/images/activities/alms-offering/banner.png">
   <h1 class="display-3 image-banner_display">ALMS OFFERING</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row my-5">
     <div class="col-12 col-lg-6">
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/geUHRHQREYs" frameborder="0"
+        <iframe title="alms offering video" width="560" height="315" src="https://www.youtube.com/embed/geUHRHQREYs" frameborder="0"
                 allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
@@ -19,11 +19,11 @@
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "activities"}}
+      <LinkToAndScrollNav @route="activities">
         <button type="button" class="btn btn-outline-primary">
           Back to activities
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

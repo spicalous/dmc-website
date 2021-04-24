@@ -1,3 +1,6 @@
-<div class="image-banner_content d-flex align-items-center">
-  {{yield}}
+{{! template-lint-disable no-inline-styles style-concatenation}}
+<div class="image-banner" style="{{this.style}}">
+  <div class="image-banner_content d-flex align-items-center">
+    {{yield}}
+  </div>
 </div>

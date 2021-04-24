@@ -19,7 +19,9 @@ $toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBo
 
     &.active,
     &:hover {
-      color: $white;
+      a {
+        color: $white;
+      }
     }
 
     &.active {

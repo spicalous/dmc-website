@@ -1,8 +1,8 @@
-{{#img-banner src="assets/images/media_cover.jpg"}}
+<ImgBanner @src="assets/images/media_cover.jpg">
   <h1 class="display-3 image-banner_display">MEDIA</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid">
-  {{#each model as |album|}}
+  {{#each this.model as |album|}}
     <div class="row mt-5">
       <div class="col px-5">
         <h2>{{album.title}}</h2>
@@ -10,31 +10,32 @@
     </div>
     <div class="row media-row d-flex align-items-center">
       {{#each album.imageSources as |imageSrc|}}
-        <div class="media-image text-center mx-1 my-5" role="button" {{action "selectAlbumAndImage" album imageSrc}}>
-          <img class="img-fluid img-thumbnail" src={{imageSrc}}>
+        <div class="media-image text-center mx-1 my-5"
+             role="button" {{on "click" (fn this.selectAlbumAndImage album imageSrc)}}>
+          <img class="img-fluid img-thumbnail" src={{imageSrc}} alt="" role="presentation">
         </div>
       {{/each}}
     </div>
   {{/each}}
 </div>
 
-{{#if selectedAlbum}}
-  {{#ember-wormhole to="modal-wormhole"}}
-    {{#bs-modal onDismissed=(action "selectAlbumAndImage" null null)}}
+{{#if this.selectedAlbum}}
+  <EmberWormhole @to="modal-wormhole">
+    <BsModal @onDismissed={{fn this.selectAlbumAndImage null null}}>
       <div class="modal-header">
-        <h5 class="modal-title" id="carousel-modal-label">{{selectedAlbum.title}}</h5>
+        <h5 class="modal-title" id="carousel-modal-label">{{this.selectedAlbum.title}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        {{bs-carousel carouselId="media-carousel"
-                      imageSources=selectedAlbum.imageSources
-                      selected=selectedImage}}
+        <BsCarousel @carouselId="media-carousel"
+                    @imageSources={{this.selectedAlbum.imageSources}}
+                    @selected={{this.selectedImage}}/>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
-    {{/bs-modal}}
-  {{/ember-wormhole}}
+    </BsModal>
+  </EmberWormhole>
 {{/if}}

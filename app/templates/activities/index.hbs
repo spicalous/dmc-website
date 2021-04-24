@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/activities_cover.png"}}
+<ImgBanner @src="assets/images/activities_cover.png">
   <h1 class="display-3 image-banner_display">ACTIVITIES</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row mt-5">
     <div class="col">
@@ -34,18 +34,18 @@
     </div>
   </div>
   <div class="row">
-    {{#each model.bhuddistCeremonies as | ceremony |}}
+    {{#each this.model.bhuddistCeremonies as | ceremony |}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
         <div class="card">
-          <img class="card-img-top" src={{ceremony.cardImage}}>
+          <img class="card-img-top" src={{ceremony.cardImage}} alt="" role="presentation">
           <div class="card-body">
             <h4 class="card-title">{{ceremony.title}}</h4>
             <p class="card-text">
               {{ceremony.shortDescription}}
             </p>
-            {{#link-to-and-scroll-nav ceremony.link class="card-link"}}
+            <LinkToAndScrollNav @route={{ceremony.link}} class="card-link">
               Read more
-            {{/link-to-and-scroll-nav}}
+            </LinkToAndScrollNav>
           </div>
         </div>
       </div>
@@ -59,18 +59,18 @@
     </div>
   </div>
   <div class="row">
-    {{#each model.trainingPrograms as | program |}}
+    {{#each this.model.trainingPrograms as | program |}}
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-5">
         <div class="card">
-          <img class="card-img-top" src={{program.cardImage}}>
+          <img class="card-img-top" src={{program.cardImage}} alt="" role="presentation">
           <div class="card-body">
             <h4 class="card-title">{{program.title}}</h4>
             <p class="card-text">
               {{program.shortDescription}}
             </p>
-            {{#link-to-and-scroll-nav program.link class="card-link"}}
+            <LinkToAndScrollNav @route={{program.link}} class="card-link">
               Read more
-            {{/link-to-and-scroll-nav}}
+            </LinkToAndScrollNav>
           </div>
         </div>
       </div>

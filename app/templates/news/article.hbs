@@ -1,18 +1,18 @@
-{{img-banner src=model.data.coverImage}}
+<ImgBanner @src={{this.model.data.coverImage}}/>
 <div class="container-fluid px-5">
   <div class="row my-5">
     <div class="col">
-      <h2>{{model.data.title}}</h2>
+      <h2>{{this.model.data.title}}</h2>
     </div>
   </div>
-  {{safeContent}}
+  {{this.safeContent}}
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "news"}}
+      <LinkToAndScrollNav @route="news">
         <button type="button" class="btn btn-outline-primary">
           Back to news
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

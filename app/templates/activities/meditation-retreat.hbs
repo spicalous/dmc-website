@@ -1,6 +1,6 @@
-{{#img-banner src="assets/images/activities/meditation-retreat/banner.png"}}
+<ImgBanner @src="assets/images/activities/meditation-retreat/banner.png">
   <h1 class="display-3 image-banner_display">MEDITATION RETREAT</h1>
-{{/img-banner}}
+</ImgBanner>
 <div class="container-fluid px-5">
   <div class="row mt-5">
     <div class="col">
@@ -64,29 +64,30 @@
       </ul>
       <p class="my-5">
         Meditation centres across the world organise meditation retreat programs annually. Please
-        {{#link-to-and-scroll-nav "contact"}}contact us{{/link-to-and-scroll-nav}} or your local meditation centre
+        <LinkToAndScrollNav @route="contact">contact us</LinkToAndScrollNav>
+        or your local meditation centre
         for more information
       </p>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-md-4 mt-2">
-      <img class="img-fluid" src="assets/images/activities/meditation-retreat/meditation-retreat-1.jpg">
+      <img class="img-fluid" src="assets/images/activities/meditation-retreat/meditation-retreat-1.jpg" alt="" role="presentation">
     </div>
     <div class="col-12 col-md-4 mt-2">
-      <img class="img-fluid" src="assets/images/activities/meditation-retreat/meditation-retreat-2.jpg">
+      <img class="img-fluid" src="assets/images/activities/meditation-retreat/meditation-retreat-2.jpg" alt="" role="presentation">
     </div>
     <div class="col-12 col-md-4 mt-2">
-      <img class="img-fluid" src="assets/images/activities/meditation-retreat/meditation-retreat-3.jpg">
+      <img class="img-fluid" src="assets/images/activities/meditation-retreat/meditation-retreat-3.jpg" alt="" role="presentation">
     </div>
   </div>
   <div class="row my-5">
     <div class="col text-center">
-      {{#link-to-and-scroll-nav "activities"}}
+      <LinkToAndScrollNav @route="activities">
         <button type="button" class="btn btn-outline-primary">
           Back to activities
         </button>
-      {{/link-to-and-scroll-nav}}
+      </LinkToAndScrollNav>
     </div>
   </div>
 </div>

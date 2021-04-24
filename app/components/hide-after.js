@@ -1,13 +1,10 @@
-import Component from '@ember/component';
-import { computed } from '@ember/object';
+import Component from '@glimmer/component';
 
-export default Component.extend({
+export default class HideAfterComponent extends Component {
 
-  classNameBindings: ['hide:d-none'],
-
-  hide: computed(function() {
+  get hide() {
     const expiry = new Date(this.year, this.month, this.day);
     return Date.now() > expiry.getTime();
-  })
+  }
 
-});
+}

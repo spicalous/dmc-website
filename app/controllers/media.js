@@ -1,14 +1,15 @@
 import Controller from '@ember/controller';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
-export default Controller.extend({
+export default class MediaController extends Controller {
 
-  selectedAlbum: null,
+  @tracked selectedAlbum = null;
+  @tracked selectedImage = null;
 
-  actions: {
-
-    selectAlbumAndImage(album, image) {
-      this.set('selectedAlbum', album);
-      this.set('selectedImage', image);
-    }
+  @action
+  selectAlbumAndImage(album, image) {
+    this.selectedAlbum = album;
+    this.selectedImage = image;
   }
-});
+}

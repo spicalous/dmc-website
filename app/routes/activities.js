@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 
-export default Route.extend({
+export default class ActivitiesRoute extends Route {
 
   model() {
     return {
@@ -74,4 +74,4 @@ export default Route.extend({
       ]
     }
   }
-});
+}
