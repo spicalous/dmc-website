@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "type": "news-article",
+      "attributes": {
+        "title": "Meditation at Atom Bank, Durham, UK",
+        "year": 2017,
+        "month": 9,
+        "day": 19,
+        "cover-image": "assets/images/news/0/1.jpg",
+        "description": "The British Digital Financial company, ATOM Bank invited monks and staffs from Wat Phra Dhammakaya New Castle to behonorable guests at their meditation event on Monday 4th September 2017, from 10:00 am to 3:00 pm."
+      }
+    },
+    {
+      "id": 1,
+      "type": "news-article",
+      "attributes": {
+        "title": "Spring Meditation Retreat on 28-29th April 2018",
+        "year": 2018,
+        "month": 4,
+        "day": 28,
+        "cover-image": "assets/images/news/1/7.jpg",
+        "description": "Meditation retreat held on the 28-29th April 2018 at the Dhammakaya Meditation Centre of Newcastle"
+      }
+    },
+    {
+      "id": 2,
+      "type": "news-article",
+      "attributes": {
+        "title": "Monk brings PEACE to workplace at HMRC, Waterview Park in Washington, UK",
+        "year": 2018,
+        "month": 5,
+        "day": 15,
+        "cover-image": "assets/images/news/2/1.jpg",
+        "description": "On 15th May 2018 we had a chance to promote meditation and answer questions regarding Buddhism philosophy and meditation at HM Revenue and Customs, Waterview park, Washington, UK."
+      }
+    },
+    {
+      "id": 3,
+      "type": "news-article",
+      "attributes": {
+        "title": "Inner PEACE & Happy Meditation Class at Macrae House Community Centre, Murton, Durham, UK",
+        "year": 2018,
+        "month": 5,
+        "day": 15,
+        "cover-image": "assets/images/news/3/1.jpg",
+        "description": "On 15th May 2018, between 6:30 - 8:00pm. We were greeted warmly by the kind ladies at the Macrae House Community Centre and held a meditation session."
+      }
+    },
+    {
+      "id": 4,
+      "type": "news-article",
+      "attributes": {
+        "title": "Kathina ceremony 2018",
+        "year": 2018,
+        "month": 11,
+        "day": 11,
+        "cover-image": "assets/images/news/4/34.jpg",
+        "description": "This years Kathina took place on the 11th November. In addition to the Kathina ceremony, this year included the installation of stained glass windows at the back of the chapel."
+      }
+    }
+  ]
+}
