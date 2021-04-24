@@ -7,5 +7,5 @@ set -e
 set -x
 
 git checkout master
-./node_modules/.bin/ember build -prod
+npx ember build -prod
 scp -r dist/* root@meditationnewcastle.co.uk:/var/www/deploy
