@@ -20,7 +20,7 @@
 </div>
 
 {{#if this.selectedAlbum}}
-  <EmberWormhole @to="modal-wormhole">
+  {{#in-element this.ui.modalContainerElement}}
     <BsModal @onDismissed={{fn this.selectAlbumAndImage null null}}>
       <div class="modal-header">
         <h5 class="modal-title" id="carousel-modal-label">{{this.selectedAlbum.title}}</h5>
@@ -37,5 +37,5 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </BsModal>
-  </EmberWormhole>
+  {{/in-element}}
 {{/if}}

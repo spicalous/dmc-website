@@ -2,15 +2,11 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const nodeSass = require('node-sass');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     fingerprint: {
       exclude: ['images/news']
-    },
-    sassOptions: {
-      implementation: nodeSass
     }
   });
 
