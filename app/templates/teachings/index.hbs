@@ -41,16 +41,6 @@
       <div>2.30 - 4.00pm</div>
       <div>Difficulty: *</div>
     </div>
-    <div class="col-12 text-center mt-3">
-      <p>
-        You can donate at your discretion via the link below<br>Sathu 🙏
-      </p>
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="hosted_button_id" value="2CYLN39RHDUVS" />
-        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-      </form>
-      <img class="img-fluid mt-3" src="assets/images/teachings/paypal-qr-code.jpeg" alt="Paypal QR code" role="presentation">
-    </div>
     <div class="col-12 mt-5 px-5 text-center text-muted">
       <div>* This class does not require any prior meditation experience. Everyone is welcome.</div>
       <div>** This class does require some meditation experience. You should have a good understanding of how to practice meditation.</div>
@@ -59,8 +49,13 @@
   <div class="row my-5">
     <div class="col-12 text-center">
       <LinkToAndScrollNav @route="teachings.meditation-benefits">
-        <button type="button" class="btn btn-outline-primary">
+        <button type="button" class="btn btn-outline-primary mt-1">
           Learn more about the benefits
+        </button>
+      </LinkToAndScrollNav>
+      <LinkToAndScrollNav @route="support">
+        <button type="button" class="btn btn-outline-primary mt-1">
+          Support the temple
         </button>
       </LinkToAndScrollNav>
     </div>
