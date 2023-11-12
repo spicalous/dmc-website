@@ -1,0 +1,14 @@
+{
+  "data": {
+    "id": 0,
+    "type": "news-article",
+    "attributes": {
+      "title": "Meditation at Atom Bank, Durham, UK",
+      "year": 2017,
+      "month": 9,
+      "day": 19,
+      "cover-image": "assets/images/news/0/1.jpg",
+      "description": "The British Digital Financial company, ATOM Bank invited monks and staffs from Wat Phra Dhammakaya New Castle to behonorable guests at their meditation event on Monday 4th September 2017, from 10:00 am to 3:00 pm."
+    }
+  }
+}
